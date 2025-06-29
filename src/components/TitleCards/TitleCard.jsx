@@ -13,7 +13,7 @@ const TitleCard = ({title, category}) => {
   }, []);
   return (
     <div className="title-cards">
-      <h2>{title?title:"Popular on Netflix"}</h2>
+      <h2>{title?title:"Phổ biến trên Netflix"}</h2>
       <div className="card-list" ref={cardsRef}>
         {cards_data.map((card, index) => {
           return (
