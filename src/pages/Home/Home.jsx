@@ -33,9 +33,9 @@ const Home = () => {
         </div>
       </div>
       <div className="more-cards">
-        <TitleCard title={"Phim bom tấn"} />
-        <TitleCard title={"Phim được đánh giá cao"} />
-        <TitleCard title={"Phim hành động"} />
+        <TitleCard title={"Phim bom tấn"} category={"popular"} />
+        <TitleCard title={"Phim được đánh giá cao"} category={"top_rated"} />
+        <TitleCard title={"Phim hành động"} category={"upcoming"} />
         <TitleCard title={"Phim hài"} />
       </div>
       <Footer />
