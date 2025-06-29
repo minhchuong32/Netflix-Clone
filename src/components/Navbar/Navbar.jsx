@@ -12,23 +12,23 @@ const Navbar = () => {
       <div className="navbar-left">
         <img src={logo} alt="Logo" className="logo" />
         <ul>
-          <li>Home</li>
-          <li>TV Shows</li>
-          <li>Movies</li>
-          <li>New & Popular</li>
-          <li>My List</li>
-          <li>Browse by Languages</li>
+          <li>Trang chủ</li>
+          <li>Chương trình TV</li>
+          <li>Phim</li>
+          <li>Mới & Phổ biến</li>
+          <li>Danh sách của tôi</li>
+          <li>Duyệt theo ngôn ngữ</li>
         </ul>
       </div>
       <div className="navbar-right">
-        <img src={search_icon} alt="" className="icon" />
-        <p>Children</p>
-        <img src={bell_icon} alt="" className="icon" />
+        <img src={search_icon} alt="Tìm kiếm" className="icon" />
+        <p>Trẻ em</p>
+        <img src={bell_icon} alt="Thông báo" className="icon" />
         <div className="navbar-profile">
-          <img src={profile_img} alt="" className="icon" />
-          <img src={caret_icon} alt="" className="icon" />
+          <img src={profile_img} alt="Hồ sơ" className="icon" />
+          <img src={caret_icon} alt="Mũi tên" className="icon" />
           <div className="dropdown">
-            <p>Sign Out of Netflix</p>
+            <p>Đăng xuất khỏi Netflix</p>
           </div>
         </div>
       </div>

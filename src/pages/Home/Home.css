@@ -35,11 +35,23 @@
 
 .hero-btns .btn img {
     width: 25px;
+    position: relative;
 }
+
+
+.hero-btns p{
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    bottom: 6px;
+    left: 4px;
+}
+
+
 
 .hero-btns .btn {
     border-radius: 0;
-    outline: 0;
+    border:none;
     padding: 8px 20px;
     display: inline-block;
     align-items: center;
@@ -54,6 +66,7 @@
 .hero-btns .btn.dark-btn {
     color: #fff;
     background: #6d6d6eb3;
+    outline: 0;
 }
 
 
