@@ -8,6 +8,7 @@ import {
   signOut,
 } from "firebase/auth";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
+import { toast } from "react-toastify";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -43,10 +44,14 @@ const signup = async (name, email, password) => {
       email: email,
     });
 
-    return userCredential.user; // ✅ return sau khi lưu dữ liệu Firestore
+    return userCredential.user;
   } catch (error) {
     console.error("Error signing up:", error);
-    throw error;
+    toast.error(
+      "Error signing up: " + error.code.split("/")[1].replace(/-/g, " ")
+    );
+
+    throw error; // Re-throw the error to handle it in the calling function
   }
 };
 
@@ -55,7 +60,9 @@ const login = async (email, password) => {
     await signInWithEmailAndPassword(auth, email, password);
   } catch (error) {
     console.error("Error logging in:", error);
-    alert(error.message);
+    toast.error(
+      "Error logging in: " + error.code.split("/")[1].replace(/-/g, " ")
+    );
   }
 };
 
@@ -66,6 +73,9 @@ const logout = () => {
     })
     .catch((error) => {
       console.error("Error signing out:", error);
+      toast.error(
+        "Error signing out: " + error.code.split("/")[1].replace(/-/g, " ")
+      );
     });
 };
 

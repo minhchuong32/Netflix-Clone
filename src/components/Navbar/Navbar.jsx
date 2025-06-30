@@ -5,7 +5,7 @@ import search_icon from "../../assets/search_icon.svg";
 import bell_icon from "../../assets/bell_icon.svg";
 import profile_img from "../../assets/profile_img.png";
 import caret_icon from "../../assets/caret_icon.svg";
-
+import { logout } from "../../firebase"; // Assuming you have a logout function in your firebase.js
 const Navbar = () => {
   const navRef = useRef();
   useEffect(() => {
@@ -39,7 +39,10 @@ const Navbar = () => {
           <img src={profile_img} alt="Hồ sơ" className="icon" />
           <img src={caret_icon} alt="Mũi tên" className="icon" />
           <div className="dropdown">
-            <p>Đăng xuất khỏi Netflix</p>
+            <p onClick={() => {
+                logout()
+                alert("Đăng xuất thành công khỏi Netflix");
+            }}>Đăng xuất khỏi Netflix</p>
           </div>
         </div>
       </div>

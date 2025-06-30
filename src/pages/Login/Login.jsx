@@ -13,14 +13,11 @@ const Login = () => {
     try {
       if (signState === "Đăng Nhập") {
         await login(email, password);
-        alert("Đăng nhập thành công");
       } else {
         await signup(name, email, password);
-        alert("Đăng ký thành công");
       }
     } catch (err) {
       console.error("Lỗi đăng ký/đăng nhập:", err);
-      alert("Lỗi: " + err.message);
     }
   };
 
